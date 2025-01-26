@@ -18,6 +18,7 @@ body::-webkit-scrollbar {
 .top-header {
     height: 40px;
     display: flex;
+    align-items: center;
     gap: 40px;
     margin-top: 15px;
 }
@@ -63,8 +64,7 @@ body::-webkit-scrollbar {
    
 }
 .first-div,
-.second-div,
-.third-div {
+.second-div {
     display: flex;
     border: 1px solid rgba(128, 128, 128, 0.469);
     height: 100%;
@@ -72,7 +72,7 @@ body::-webkit-scrollbar {
     column-gap: 6px;
     border-radius: 6px;
     padding: 0px 10px;
-    width: 40%;
+    width: 30%;
 }
 .first-div:focus-within,
 .second-div:focus-within {
@@ -83,6 +83,7 @@ body::-webkit-scrollbar {
 }
 .location-input input,
 .search-input input{
+    width: 100%;
     padding: 13px 15px;
     border: none;
     font-size: 1rem;
@@ -97,13 +98,13 @@ body::-webkit-scrollbar {
 }
 .drop-down-list {
     border-radius: 5px;
-    box-shadow: 3px 3px rgba(192, 192, 192, 0.329);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .12), 0 6px 6px 0 rgba(0, 0, 0, .24);
     display: flex;
     flex-direction: column;
-    width: 320px;
+    width: 300px;
     height: auto;
     position: absolute;
-    top: 125px;
+    top: 128px;
     left: 128px;
     background-color: #fff;
     z-index: 10;
@@ -117,6 +118,9 @@ body::-webkit-scrollbar {
 }
 #check {
     display: none;
+}
+#check:checked ~ .drop-down-list {
+    display: block;
 }
 .drop-down-list {
     display: none;
@@ -150,7 +154,7 @@ body::-webkit-scrollbar {
 }
 .second-div {
     padding: 0;
-    width: 60%;
+    width: 50%;
 }
 .search-input {
     height: 100%;
@@ -174,18 +178,86 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 .third-div {
-    border: none;
+    /* border: 2px solid red; */
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
     width: 20%;
+    column-gap: 10px;
+    margin-left: 4px;
     cursor: pointer;
 }
-.sell {
-    display: flex;
+.third-div .login {
+    /* border: 2px solid red; */
+    width: 30%;
 }
-.sell-plus-svg,
-.sell-txt {
+
+.third-div .login a {
+    font-size: 16px;
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+/* .third-div a {
+    border: 2px solid red;
+    width: 20%;
+    
+} */
+.third-div > .border-img {
+    /* border: 2px solid red; */
+    width: 70%;
+    height: 100%;
+    background: url(../Images/sell-svg.svg) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.border-img > .border-img-text {
     position: absolute;
-    right: 195px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 60%;
+    margin: 0 auto;
+}
+/* 
+.border-img-text > svg {
+    padding-top: 6px;
+}
+
+.border-img-text > span {
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+    font-size: 16px;
+} */
+
+.third-div .sell {
+    height: 100%;
+    position: relative;
+    width: 60%;
+    background: url(../Images/sell-svg.svg) no-repeat;
+    background-size: cover;
+    /* border: 2px solid red; */
+}
+
+.sell-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    /* border: 2px solid red; */
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 6px;
 }
 .sell-txt {
-    right: 155px;
+    font-weight: bold;
+    font-size: 1rem;
 }
