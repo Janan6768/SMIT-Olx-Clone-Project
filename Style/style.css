@@ -122,6 +122,12 @@ body::-webkit-scrollbar {
 #check:checked ~ .drop-down-list {
     display: block;
 }
+#check:checked ~ .first-div .drop-down {
+    transform: rotate(180deg);
+}
+.drop-down {
+    cursor: pointer;
+}
 .drop-down-list {
     display: none;
 }
@@ -202,11 +208,7 @@ body::-webkit-scrollbar {
     border-bottom: 2px solid black;
     font-weight: bold;
 }
-/* .third-div a {
-    border: 2px solid red;
-    width: 20%;
-    
-} */
+
 .third-div > .border-img {
     /* border: 2px solid red; */
     width: 70%;
@@ -224,17 +226,6 @@ body::-webkit-scrollbar {
     width: 60%;
     margin: 0 auto;
 }
-/* 
-.border-img-text > svg {
-    padding-top: 6px;
-}
-
-.border-img-text > span {
-    display: inline-block;
-    position: relative;
-    bottom: 2px;
-    font-size: 16px;
-} */
 
 .third-div .sell {
     height: 100%;
