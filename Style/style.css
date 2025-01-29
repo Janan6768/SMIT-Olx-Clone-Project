@@ -7,10 +7,12 @@ body {
     font-family: "Roboto","Helvetice", sans-serif;
     background: white;
 }
-
-/* body::-webkit-scrollbar {
-    width: 0px;
-} */
+header {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    padding-bottom: 1rem;
+}
 .container {
     max-width: 80%;
     margin: 0 auto;
@@ -21,10 +23,12 @@ body {
     align-items: center;
     gap: 40px;
     margin-top: 15px;
+
 }
+
 .logo {
     cursor: pointer;
-    margin-top: 10px;
+    padding-top: 7px;
 }
 .car-icon,.building-icon {
     display: flex;
@@ -37,8 +41,8 @@ body {
     background-color: rgb(220, 226, 227);
 }
 .logo-txt {
-    font-size: 1.2rem;
-    padding-top: 12px;
+    font-size: 1rem;
+    padding-top: 7px;
     font-weight: bold;
 }
 .car-icon:hover .svg-div,
@@ -175,14 +179,7 @@ body {
     border-radius: 0px 5px 5px 0px;
     cursor: pointer;
 }
-.login-txt h2 {
-    font-weight: bold;
-    text-decoration: underline;
-    /* padding-bottom: 5px; */
-    margin: 20px;
-    font-size: 1rem;
-    cursor: pointer;
-}
+
 .third-div {
     /* border: 2px solid red; */
     display: flex;
@@ -191,17 +188,17 @@ body {
     justify-content: center;
     width: 20%;
     column-gap: 10px;
-    margin-left: 4px;
+    margin-left: 8px;
     cursor: pointer;
 }
 .third-div .login {
     /* border: 2px solid red; */
-    width: 30%;
+    width: 22%;
 }
 
 .third-div .login a {
     font-size: 16px;
-    font-size: 1rem;
+    font-size: 1.3em;
     color: #000;
     text-decoration: none;
     padding-bottom: 1px;
@@ -210,24 +207,6 @@ body {
 }
 .third-div .login a:hover {
     border-bottom: none;
-}
-
-.third-div > .border-img {
-    /* border: 2px solid red; */
-    width: 70%;
-    height: 100%;
-    background: url(../Images/sell-svg.svg) no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.border-img > .border-img-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    width: 60%;
-    margin: 0 auto;
 }
 
 .third-div .sell {
@@ -253,11 +232,9 @@ body {
 }
 .sell-txt {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.1em;
 }
-/* new wrok */
 hr {
-    margin-top: 1rem;
     border: 1px solid #d8dfe0;;
 }
 .section {
@@ -296,7 +273,7 @@ hr {
 .div-txt h2 {
     font-size: 1.4rem;
 }
-.section2 {
+.catogrey-list {
     width: 100%;
     display: flex;
     column-gap: 3rem;
@@ -319,28 +296,100 @@ hr {
 /* card and above text styling */
 .section3 {
     padding: 10px;
-  }
-  
-  .div-txt {
+}
+
+.div-txt {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .txt2 {
+}
+
+.txt2 {
     flex-grow: 1;
-  }
-  
-  .txt3,
-  .arr-svg {
+}
+
+.txt3,
+.arr-svg {
     display: flex;
     align-items: center;
     color: #3b79ff;
     fill: #3b79ff;
     font-weight: bold;
-  }
-  
-  .arr-svg {
+}
+.arr-svg {
     margin-left: 8px;
-  }
-  
+}
+.txt3:hover,
+.arr-svg:hover {
+    cursor: pointer;
+}
+.mobile-card,.car-card,
+.bikes-card,.house-card {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.main-card {
+    border: 1px solid #d8dfe0;
+    width: 24%;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    display: flex;
+}
+.card-img img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.card-txt-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
+.fa-heart:hover {
+    cursor: pointer;
+    color: red;
+}
+.card-txt-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: 15px;
+}
+.first-phara, .third-phara {
+    margin-bottom: 10px;
+}
+.second-phara, .third-phara, .meter{
+    color: #3f6266;
+}
+.third-phara {
+    font-size: 0.8rem;
+}
+.section3,.mobile-card,
+.car-card,.bikes-card,.house-card {
+    width: 95%;
+    margin: 0 auto;
+}
+.meter {
+    display: flex; 
+    align-items: center;
+    font-size: 0.8rem;
+    gap: 3px;
+    font-weight: bold;
+}
+.svg-div2 {
+    display: flex;
+    gap: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #3f6266;
+
+}
+.svg-div2 img {
+    width: 18px;
+    height: 18px;
+
+}
+ 
+
+
