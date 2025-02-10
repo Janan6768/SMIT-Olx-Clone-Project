@@ -76,7 +76,7 @@ header {
     column-gap: 6px;
     border-radius: 6px;
     padding: 0px 10px;
-    width: 30%;
+    /* width: 30%;  */
 }
 .first-div:focus-within,
 .second-div:focus-within {
@@ -108,7 +108,7 @@ header {
     width: 295px;
     height: auto;
     position: absolute;
-    top: 128px;
+    top: 116px;
     left: 128px;
     background-color: #fff;
     z-index: 10;
@@ -183,21 +183,20 @@ header {
 .third-div {
     /* border: 2px solid red; */
     display: flex;
-    height: 100%;
     align-items: center;
     justify-content: center;
     width: 20%;
+    height: 100%;
     column-gap: 10px;
     margin-left: 8px;
     cursor: pointer;
 }
 .third-div .login {
     /* border: 2px solid red; */
-    width: 22%;
+    width: 30%;
 }
 
 .third-div .login a {
-    font-size: 16px;
     font-size: 1.3em;
     color: #000;
     text-decoration: none;
@@ -208,31 +207,38 @@ header {
 .third-div .login a:hover {
     border-bottom: none;
 }
-
 .third-div .sell {
+    /* border: 2px solid red; */
     height: 100%;
     position: relative;
-    width: 60%;
+    min-width: 120px;
+    max-width: 200px;
     background: url(../Images/sell-svg.svg) no-repeat;
-    background-size: cover;
-    /* border: 2px solid red; */
-}
+    /* background-size: cover; */
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 
+}
 .sell-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
-    /* border: 2px solid red; */
-    width: 80%;
+    /* width: 80%; */
+    width: 100%;
+    max-width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 6px;
+    column-gap: 5px;
+
 }
 .sell-txt {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.1em;  
 }
 hr {
     border: 1px solid #d8dfe0;;
@@ -406,6 +412,7 @@ hr {
     gap: 10px;  
     text-align: center;
     margin-left: 30px;
+    flex-wrap: wrap;
     
 }
 .resize {
@@ -455,6 +462,7 @@ hr {
     display: flex;
     padding-top: 15px;
     gap: 8px;
+    flex-wrap: wrap;
 }
 .icon {
     width: 10px; 
@@ -486,5 +494,252 @@ footer {
     color: red;
 }
 
+/* Mobile (L) Size */
+@media (min-width:425px) and (max-width:767px) {
+    html,body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    header {
+    padding-bottom: 0.5rem;
+    position: static;
+  }
+    .drop-down-list {
+        height: auto;
+        max-height: 80vh;
+        overflow-y: auto;
+      }
+    .container,
+    .conatianer2 {
+        max-width: 100%;
+        margin: 0 auto;
+        /* padding: 0 10%; */
+    }
+    .section-txt {
+        display: none;
+    }
+    .bottom-header {
+        display: flex;
+        justify-content: space-around;
+        /* border: 2px solid red;    */
+    }
+    .first-div {
+        width: 50%;
+    }
+    .second-div {
+        display: none;
+    }
+    .third-div .login a,
+    .sell-txt {
+        font-size: 0.8rem;
+    }
+    .third-div .sell {
+        min-width: 100px;
+    }
+    .sell-content {
+        top: 40%;
+    } 
+    .banner-img img {
+        margin: 15px 0;
+    }
+    .catogrey-list {
+        margin-left: 10px;
+        column-gap: 1rem;
+        row-gap: 0.5rem;
+    }
+    .mobile-card,
+    .car-card,
+    .bikes-card,
+    .house-card {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 10px;
+      padding: 0 10px 10px;
+    }
+    
+    .main-card {
+      flex: 0 0 90%;
+      width: auto;
+      scroll-snap-align: start;
+      margin-bottom: 0;
+    }
+  
+    .main-card:last-child {
+      margin-right: 15px;
+    }
 
+    ::-webkit-scrollbar {
+      display: none;
+    }
 
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 2px;
+    }
+
+    .bef-footer-icon-div {
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+    .bef-footer-icon-div img {
+        width: 20px;
+        height: 30px;
+    }
+    .icon {
+        padding: 3px;
+    }
+    .bef-footer-right-div {
+        align-items: center;
+        padding: 10px 0;
+        margin-top: 15px;
+    }
+    .bef-footer-svg {
+        display: none;
+    }
+    .bef-footer-sec {
+        /* width: 100%; */
+        padding: 15px 10px;
+        flex-wrap: wrap;
+    }
+    .bef-footer-sec2 {
+        display: grid;
+        grid-template-areas: 
+          "a b c d"
+          "footer footer footer footer";
+        gap: 20px;
+    }
+    .bef-footer-right-div {
+        grid-area: footer;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .bef-footer-icon-div {
+        justify-content: center;
+        gap: 15px;
+        padding-right: 15px;
+    }
+    footer {
+        padding: 1rem;
+    }
+}
+
+/* Tablet Size */
+@media (min-width:768px) and (max-width:1023px) {
+    p{
+        font-size: 0.8rem;
+       }
+       span,
+       .phara p{
+        font-size: 0.7rem;
+       }
+       .first-div,
+       .second-div,.third-div {
+        column-gap: 4px;
+       }
+       .third-div .sell-txt,
+       .third-div .login a {
+        font-size: 0.7rem;
+       }
+       h4 {
+        font-size: 1rem;
+        }
+    .drop-down-list {
+        left: 75px;
+        width: 235px;
+       }
+    .section {
+        display: flex;
+        column-gap: 10px;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+    }
+    .section .txt-arrow-container {
+        font-size: 0.9rem;
+        display: flex;
+        gap: 5px;
+    }
+    .section-txt {
+       font-size: 0.8rem;
+    }
+    .catogrey-list {
+        column-gap: 2rem;
+        row-gap: 0.8rem;
+    }
+    .bed,
+    .tub,
+    .window {
+        font-size: 0.7rem;
+    }
+    .bed img,
+    .tub img,
+    .window img
+    {
+        height: 20px;
+        width: 16px;
+    }
+    .bef-footer-svg {
+        width: 100px;
+    }
+    .footer-div{
+        display: flex;
+        justify-content: center;
+    }
+    .bef-footer-right-div {
+        margin-left: 20px;
+    }
+}
+
+/* 4k Size */
+@media (min-width:2560px) {
+    p{
+     font-size: 1.5rem;
+    }
+    span,
+    .phara p{
+     font-size: 1rem;
+    }
+    h4 {
+     font-size: 1.7rem;
+    }
+    .logo-txt {
+     font-size: 2rem;
+    }
+    .drop-down-list {
+     left: 255px;
+     width: 310px;
+    }
+    .second-div {
+     width: 60%;
+    }
+    .third-div .sell {
+     width: 30%;
+     padding: 0 70px;
+    }
+    .section-txt,
+    .main-containt {
+     font-size: 1.2rem;
+    }
+    .meter,
+    .third-phara {
+     font-size: 1.2rem;
+     }
+     .heading {
+         font-size: 1.7rem;
+     }
+     .resize2 {
+         width: 200px;
+     }
+     .bed,
+     .tub,
+     .window {
+         font-size: 1.5rem;
+     }
+     .bed img,
+     .tub img,
+     .window img
+     {
+         height: 30px;
+         width: 20px;
+     }
+ }
